@@ -11,9 +11,13 @@ $routes = array(
     'controller' => 'Events',
     'action' => 'index'
   ),
-  'events' => array(
+  'agenda' => array(
     'controller' => 'Events',
-    'action' => 'index'
+    'action' => 'agenda'
+  ),
+  'detail' => array(
+    'controller' => 'Events',
+    'action' => 'detail'
   ),
 );
 

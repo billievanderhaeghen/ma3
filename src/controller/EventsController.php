@@ -12,6 +12,16 @@ class EventsController extends Controller {
   }
 
   public function index() {
+    $events = $this->eventDAO->selectHomeEvents();
+    $this->set('events', $events);
+  }
+
+  public function agenda() {
+    $events = $this->eventDAO->selectAll();
+    $this->set('events', $events);
+  }
+
+  public function detail() {
     $conditions = array();
 
     //example: search on title
@@ -79,7 +89,6 @@ class EventsController extends Controller {
     );
 
     $events = $this->eventDAO->search($conditions);
-    // $events = $this->eventDAO->selectAll();
     $this->set('events', $events);
   }
 
