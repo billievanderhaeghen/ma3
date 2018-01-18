@@ -1,0 +1,9 @@
+@import 'reset';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after { /* stylelint-disable-line */
+  box-sizing: inherit;
+}
