@@ -79,11 +79,26 @@ class EventDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  public function selectAllTags() {
+    $sql = "SELECT * FROM `ma3_auto_tags`";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
   public function selectHomeEvents() {
     $sql = "SELECT * FROM `ma3_auto_events` WHERE `home` = 1";
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  public function selectDayById($id) {
+    $sql = "SELECT * FROM `ma3_days` WHERE `id` = :id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
   public function selectById($id) {

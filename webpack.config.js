@@ -24,15 +24,15 @@ const commonConfig = {
         exclude: /node_modules/,
         use: [
           {
-            loader: `babel-loader`
+            loader: `babel-loader`,
           },
           {
             loader: `eslint-loader`,
             options: {
               fix: true,
             },
-          }
-        ]
+          },
+        ],
       },
       {
         test: /\.(jpe?g|png|svg|woff|woff2|webp|gif)$/,
@@ -42,7 +42,7 @@ const commonConfig = {
           context: `./src`,
           name: `[path][name].[ext]`,
         },
-      }
+      },
     ],
   },
   plugins: [

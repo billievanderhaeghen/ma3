@@ -1,8 +1,8 @@
 {
-  const init = () => {
-    console.log('alright');
 
-    }
+  const init = () => {
+    console.log(`alright`);
+  };
 
   init();
 }

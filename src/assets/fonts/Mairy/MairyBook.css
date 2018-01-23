@@ -1,0 +1,6 @@
+@font-face {
+  font-family: MairyBook;
+  src: url(MairyBook.woff2) format('woff2'), url(MairyBook.woff) format('woff');
+  font-weight: 200;
+  font-style: normal;
+}

@@ -1,0 +1,6 @@
+@font-face {
+  font-family: MairyBold;
+  src: url(MairyBold.woff2) format('woff2'), url(MairyBold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+}

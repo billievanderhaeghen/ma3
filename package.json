@@ -1,7 +1,7 @@
 {
   "name": "ma3",
   "version": "1.0.0",
-  "description": "Groepsopdracht COD",
+  "description": "Major 3 - Week van de Mobiliteit",
   "main": "index.js",
   "scripts": {
     "production": "npm run clean && npm run copydist && NODE_ENV=production webpack -p",
@@ -41,6 +41,7 @@
     "postcss-reporter": "^5.0.0",
     "puppeteer": "^0.13.0",
     "style-loader": "^0.19.1",
+    "stylelint-config-devine": "^1.1.4",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.4",

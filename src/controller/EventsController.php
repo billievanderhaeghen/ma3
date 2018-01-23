@@ -17,8 +17,58 @@ class EventsController extends Controller {
   }
 
   public function agenda() {
-    $events = $this->eventDAO->selectAll();
+
+    $tags = $this->eventDAO->selectAllTags();
+    $this->set('tags', $tags);
+
+    $events = $this->_searchEvents();
+
+    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+      header('Content-Type: application/json');
+      echo json_encode($events);
+      exit();
+    }
+
     $this->set('events', $events);
+
+    // $day = $this->eventDAO->selectDayById(2);
+    // $this->set('day', $day);
+
+  }
+
+  public function _searchEvents() {
+    $conditions = array();
+
+    if( !empty( $_GET["query"]) ){
+      // example: search on title
+      $conditions[] = array(
+        'field' => 'title',
+        'comparator' => 'like',
+        'value' => $_GET["query"]
+      );
+    }
+
+    if( !empty( $_GET["postcode"]) ){
+      // example: search on title
+      $conditions[] = array(
+        'field' => 'postal',
+        'comparator' => 'like',
+        'value' => $_GET["postcode"]
+      );
+    }
+
+    if( !empty( $_GET["tag"]) ){
+      // example: search on title
+      $conditions[] = array(
+        'field' => 'tag',
+        'comparator' => 'like',
+        'value' => $_GET["tag"]
+      );
+    }
+
+    $events = $this->eventDAO->search($conditions);
+    return $events;
+
   }
 
   public function detail() {
