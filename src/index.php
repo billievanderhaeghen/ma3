@@ -15,6 +15,10 @@ $routes = array(
     'controller' => 'Events',
     'action' => 'agenda'
   ),
+  'agenda-ajax' => array(
+    'controller' => 'Events',
+    'action' => 'agendaAjax'
+  ),
   'detail' => array(
     'controller' => 'Events',
     'action' => 'detail'

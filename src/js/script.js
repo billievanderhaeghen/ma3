@@ -1,7 +1,7 @@
 {
-
   const init = () => {
-    console.log(`alright`);
+    console.log(`yasss`);
+
   };
 
   init();

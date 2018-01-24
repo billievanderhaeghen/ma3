@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Autovrij</title>
+    <title>Mobillieteit</title>
     <meta name="author" content="Billie Vanderhaeghen">
     <meta name="description" content="Week van de mobiliteit">
     <script>

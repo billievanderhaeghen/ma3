@@ -72,6 +72,22 @@ class EventDAO extends DAO {
     return $result;
   }
 
+  public function selectTagsByEventId($eventId) {
+    $sql = "SELECT * FROM `ma3_auto_events_tags` WHERE `event_id` = :event_id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':event_id', $eventId);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  public function selectTagsById($id) {
+    $sql = "SELECT * FROM `ma3_auto_tags` WHERE `id` = :id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
   public function selectAll() {
     $sql = "SELECT * FROM `ma3_auto_events`";
     $stmt = $this->pdo->prepare($sql);

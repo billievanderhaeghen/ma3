@@ -18,12 +18,19 @@ class EventsController extends Controller {
 
   public function agenda() {
 
+    //link to the webpack-dev-server livereload script in development mode
+    $this->set('jsfilter', '<script src="http://localhost:8080/js/script-agenda.js"></script>');
+    if($this->env == 'production') {
+      //link to the generated javascript file in production mode
+      $this->set('jsfilter', '<script src="js/script-agenda.js"></script>');
+    }
+
     $tags = $this->eventDAO->selectAllTags();
     $this->set('tags', $tags);
 
     $events = $this->_searchEvents();
 
-    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+    if ($this->isAjax) {
       header('Content-Type: application/json');
       echo json_encode($events);
       exit();
@@ -33,6 +40,23 @@ class EventsController extends Controller {
 
     // $day = $this->eventDAO->selectDayById(2);
     // $this->set('day', $day);
+
+  }
+
+  public function agendaAjax() {
+    // print ($this->isAjax)?'ok':'geen ajax';
+
+    header('Content-Type: application/json');
+
+    if ($this->isAjax) {
+      // print "we zijn er";
+      $events = $this->_searchEvents();
+
+      echo json_encode( $events );
+      exit();
+
+    }
+
 
   }
 
@@ -71,8 +95,7 @@ class EventsController extends Controller {
 
   }
 
-  public function detail() {
-    $conditions = array();
+  public function examples() {
 
     //example: search on title
     // $conditions[] = array(
@@ -126,20 +149,13 @@ class EventsController extends Controller {
     //   'value' => '2018-09-17 00:00:00'
     // );
 
-    //example: search on organiser, with certain end date + time
-    $conditions[] = array(
-      'field' => 'organiser',
-      'comparator' => 'like',
-      'value' => 'brussel'
-    );
-    $conditions[] = array(
-      'field' => 'end',
-      'comparator' => '=',
-      'value' => '2018-09-16 18:00:00'
-    );
+  }
 
-    $events = $this->eventDAO->search($conditions);
-    $this->set('events', $events);
+  public function detail() {
+
+    $id = $_GET["id"];
+    $event = $this->eventDAO->selectById($id);
+    $this->set('event', $event);
   }
 
 }
