@@ -33,7 +33,7 @@
         <header><h2><?php echo $event['title']; ?></h2></header>
         <img class="events-result-item-img"
             src="assets/img/events/<?php echo $event["code"];?>/1.jpg"
-            eight="474" width="480"
+            height="474" width="480"
              alt="blog-image">
         <dl>
           <dt>start</dt><dd><?php echo $event['start'];?></dd>

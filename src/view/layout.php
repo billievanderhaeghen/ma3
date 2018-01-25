@@ -46,14 +46,19 @@
     <footer class="footer">
       <div class="partners">
         <h3>Partners:</h3>
-        <a href="#" class="partner-link"><div class="partner-img"></div></a>
-        <a href="#" class="partner-link"><div class="partner-img"></div></a>
-        <a href="#" class="partner-link"><div class="partner-img"></div></a>
+        <div class="links">
+          <a href="#" class="partner-link"><div class="vlaanderen-img"></div></a>
+          <a href="#" class="partner-link"><div class="nmbs-img"></div></a>
+          <a href="#" class="partner-link"><div class="lijn-img"></div></a>
+        </div>
       </div>
       <div class="social">
-        <a href="#" class="social-link"><div class="fb-img"></div></a>
-        <a href="#" class="social-link"><div class="tw-img"></div></a>
-        <a href="#" class="social-link"><div class="ig-img"></div></a>
+        <h3>Volg ons:</h3>
+        <div class="links">
+          <a href="#" class="social-link"><div class="fb-img"></div></a>
+          <a href="#" class="social-link"><div class="tw-img"></div></a>
+          <a href="#" class="social-link"><div class="ig-img"></div></a>
+        </div>
       </div>
     </footer>
     <?php echo $js;?>

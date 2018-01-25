@@ -1,13 +1,5 @@
 @import 'reset';
-
-:root {
-  --mellowYellow: #f8efd0;
-  --yellow: #fbcc25;
-  --red: #f57d90;
-  --blue: #2bcdc9;
-  --textBlue: #16bab6;
-  --brown: #825a60;
-}
+@import 'vars';
 
 html {
   box-sizing: border-box;
@@ -61,7 +53,162 @@ body {
   text-decoration: none;
 }
 
-/* Home */
+/* about */
+
+.about-title {
+  font-size: 3rem;
+  font-family: MairyBook;
+  color: white;
+}
+
+.about-p {
+  width: 28.5rem;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: bolder;
+  color: var(--textBrown);
+}
+
+/* events */
+
+.events-header {
+  background-image: url(../assets/img/bordershadow_blue.png);
+  background-repeat: no-repeat;
+  background-position: 97% 13%;
+  background-color: var(--blue);
+  height: 5.5rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card-link {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-decoration: none;
+}
+
+.events-title {
+  font-family: MairyBold;
+  font-size: 5rem;
+  color: white;
+}
+
+.event-card-start {
+  font-family: MairyBold;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.event-card-img {
+  border-radius: 2rem;
+  position: relative;
+  z-index: -1;
+}
+
+.event-card-info {
+  @apply --my-radius-rect;
+  background-image: url(../assets/img/bordershadow_blue.png);
+  background-position: 97% 13%;
+  border: 3px solid white;
+  background-color: var(--blue);
+  width: 30rem;
+  height: 7rem;
+  padding: 1.4rem;
+  margin-top: -2rem;
+  z-index: 2;
+
+  &:hover {
+    background-image: url(../assets/img/bordershadow_red.png);
+    background-color: var(--red);
+  }
+}
+
+.event-card-title {
+  font-size: 2.6rem;
+  font-family: MairyBold;
+  color: white;
+}
+
+/* footer */
+
+.partner-link div {
+  background-image: url(../assets/img/icons_partner.png);
+  background-repeat: no-repeat;
+}
+
+.vlaanderen-img {
+  background-position: 0% 90%;
+  width: 12.7rem;
+  height: 5.5rem;
+
+  &:hover {
+    background-position: 0% 0%;
+  }
+}
+
+.nmbs-img {
+  background-position: 64% 91.2%;
+  width: 7.3rem;
+  height: 4.7rem;
+
+  &:hover {
+    background-position: 64% 10%;
+  }
+}
+
+.lijn-img {
+  background-position: 100% 100%;
+  width: 6.6rem;
+  height: 6.2rem;
+
+  &:hover {
+    background-position: 100% 0%;
+  }
+}
+
+.social-link div {
+  background-image: url(../assets/img/illustrations_icons_social.svg);
+  background-repeat: no-repeat;
+}
+
+.fb-img {
+  background-position: 0% -2%;
+  background-size: 335%;
+  width: 4.4rem;
+  height: 4.3rem;
+
+  &:hover {
+    background-position: 0% 99.6%;
+  }
+}
+
+.tw-img {
+  width: 5.2rem;
+  height: 4.4rem;
+  background-size: 278%;
+  background-position: 50% 0%;
+
+  &:hover {
+    background-position: 50% 102.1%;
+  }
+
+}
+
+.ig-img {
+  width: 4.4rem;
+  height: 4.4rem;
+  background-size: 349%;
+  background-position: 100% 0%;
+
+  &:hover {
+    background-position: 100% 100%;
+  }
+
+}
+
 @media only screen and (min-width: 1024px) {
   @keyframes translate {
 
@@ -129,6 +276,8 @@ body {
     }
   }
 
+  /* header */
+
   .header-container {
     justify-content: space-around;
     width: 100vw;
@@ -179,6 +328,163 @@ body {
     }
   }
 
+  /* about */
+
+  .about {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    height: 105.2rem;
+  }
+
+  .article-about {
+    height: 27rem;
+  }
+
+  .positioning-about-img {
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+    height: 15.5rem;
+  }
+
+  .overstap {
+
+    margin-top: -5rem;
+
+    & .positioning-about-img {
+      align-items: flex-end;
+    }
+  }
+
+  /* events */
+
+  .event-cards {
+    height: 100rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+  }
+
+  .event-card {
+    display: flex;
+    justify-content: center;
+  }
+
+  .events-header {
+    width: 26rem;
+    margin-top: -1.3rem;
+  }
+
+  .events-title {
+    width: 20rem;
+  }
+
+  /* dagen */
+
+  .dagen {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 200rem;
+    justify-content: space-around;
+  }
+
+  .dagen-article {
+    background-color: white;
+    border-radius: 2rem;
+    width: 90vw;
+    align-self: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .carfree .date-border {
+    width: 22rem;
+  }
+
+  .date-border {
+    background-color: var(--blue);
+    color: white;
+    height: 4rem;
+    width: 10rem;
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dag-div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 48rem;
+  }
+
+  .dag-title {
+    font-size: 3.5rem;
+    font-family: MairyBook;
+    color: var(--red);
+  }
+
+  .dag-p {
+    font-size: 1.7rem;
+    text-align: center;
+    color: var(--textBrown);
+  }
+
+  .dag-button {
+    @apply --my-radius-rect;
+
+    width: 80vw;
+    height: 4.5rem;
+    justify-content: center;
+    background-color: var(--yellow);
+    font-size: 2.8rem;
+    font-family: MairyBook;
+    color: var(--textBrown);
+    background-image: url(../assets/img/bordershadow_yellow.png);
+
+    &:hover {
+      color: white;
+      background-color: var(--blue);
+      background-image: url(../assets/img/bordershadow_blue.png);
+    }
+  }
+
+  /* footer */
+
+  .footer {
+    display: flex;
+    flex-flow: row wrap;
+    height: 22rem;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-family: MairyBook;
+  }
+
+  .partners {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    & h3 {
+      color: var(--red);
+      width: 93vw;
+    }
+  }
+
+  .links {
+    display: flex;
+    width: 93vw;
+    justify-content: space-around;
+  }
+
 }
 
 .tram {
@@ -200,20 +506,8 @@ body {
 .article-about {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-}
-
-.goedopweg {
-  grid-area: goedopweg;
-}
-
-.alternatieven {
-  grid-area: alternatieven;
-}
-
-.overstap {
-  grid-area: overstap;
 }
 
 .dagen {

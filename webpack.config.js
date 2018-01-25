@@ -62,6 +62,7 @@ const developmentConfig = merge([
     devServer: {
       overlay: true,
       contentBase: PATHS.src,
+      host: `0.0.0.0`,
     },
   },
   parts.loadCSS(),

@@ -1,0 +1,18 @@
+:root {
+  --mellowYellow: #f8efd0;
+  --yellow: #fbcc25;
+  --red: #f57d90;
+  --blue: #2bcdc9;
+  --textBlue: #16bab6;
+  --brown: #825a60;
+  --textBrown: #4d262c;
+
+  --my-radius-rect: {
+    background-repeat: no-repeat;
+    background-position: 98% 13%;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+}
