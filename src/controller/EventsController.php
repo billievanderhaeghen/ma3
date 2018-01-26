@@ -163,6 +163,9 @@ class EventsController extends Controller {
     $id = $_GET["id"];
     $event = $this->eventDAO->selectById($id);
     $this->set('event', $event);
+    $dayId = $event['day'];
+    $day = $this->eventDAO->selectDayById($dayId);
+    $this->set('day', $day);
 
     $tags = $this->eventDAO->selectTagsByEventId($id);
     $this->set('tags', $tags);

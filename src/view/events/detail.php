@@ -11,8 +11,15 @@
 </header>
 <main>
   <section>
+      <article class="breadcrumbs">
+        <a href="index.php?agenda">Agenda</a><p>></p><a href="index.php?page=agenda&day=<?php echo $day['id'] ?>"><?php echo $day['name'] ?></a>
+      </article>
       <article>
         <header><h2><?php echo $event['title']; ?></h2></header>
+        <img class="event-card-img"
+            src="assets/img/events/<?php echo $event["code"];?>/1.jpg"
+            height="214" width="320"
+             alt="blog-image">
         <dl>
           <dt>code</dt><dd><?php echo $event['code'];?></dd>
           <dt>content</dt><dd><?php echo $event['content'];?></dd>
@@ -27,10 +34,11 @@
           <dt>tags</dt>
           <dd>
             <ul><?php foreach($tags as $tag): ?>
-              <?php foreach ($tag as $t): ?>
-              <li><?php echo $t['tag'];?></li>
-              <?php endforeach;?></ul>
-            <?php endforeach;?></ul>
+                  <?php foreach ($tag as $t): ?>
+                    <li><?php echo $t['tag'];?></li>
+                  <?php endforeach;?>
+                <?php endforeach;?>
+            </ul>
           </dd>
         </dl>
       </article>
