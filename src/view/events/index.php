@@ -51,7 +51,7 @@
     <header class="events-header">
       <h2 class="events-title">In de kijker</h2>
     </header>
-    <div class="event-cards">
+    <div class="event-cards events-home">
       <?php foreach($events as $event): ?>
         <article class="event-card">
           <a class="card-link" href="index.php?page=detail&amp;id=<?php echo $event["id"]; ?>">
@@ -83,7 +83,7 @@
         <img class="dag-img" src="assets/img/illustrations_fiets.svg" alt="fiets" width="243" height="158">
         <h2 class="dag-title">Autovrije Zondag</h2>
         <p class="dag-p">Alle remmen los voor de Autoloze zondag op 16 september! Overal in België is er wel iets te doen. Zoek je een fiets? Dan is de tweedehands fietsenmarkt in Brussel zeker iets voor jou. Als je niet weet wat een monowheel is, kan je dan weer in Gent terecht.</p>
-        <a href="index.php?page=agenda" class="dag-button">Bekijk evenementen</a>
+        <a href="index.php?page=agenda&day=1" class="dag-button">Bekijk evenementen</a>
       </div>
     </article>
     <article class="dagen-article carfree">
@@ -94,7 +94,7 @@
         <img class="dag-img" src="assets/img/illustrations_gitaar.svg" alt="gitaar" width="262" height="140">
         <h2 class="dag-title">Car Free Festival</h2>
         <p class="dag-p">Studio Brussel nodigt tallen muzikanten uit om je rit op het openbaar vervoer een heel wat sfeervoller te maken. Een partybus voor in de file, fietstaxi’s, zelfs een eigen Studio Brussel tram, je zal er zo veel plezier beleven dat het niet spoort!</p>
-        <a href="index.php?page=agenda" class="dag-button">Bekijk evenementen</a>
+        <a href="index.php?page=agenda&day=2" class="dag-button">Bekijk evenementen</a>
       </div>
     </article>
     <article class="dagen-article strapdag">
@@ -105,7 +105,7 @@
         <img class="dag-img" src="assets/img/illustrations_helm.svg" alt="helm"  width="174" height="158">
         <h2 class="dag-title">Strapdag</h2>
         <p class="dag-p">Georganiseerd door Octopusplan, moedigt Strapdag kinderen én hun ouders aan om duurzaam en veilig naar school te gaan. Je kan genieten van straatanimatie, een workshop volgen om je fiets te pimpen, picknicken op straat, strap yourself in! </p>
-        <a href="index.php?page=agenda" class="dag-button">Bekijk evenementen</a>
+        <a href="index.php?page=agenda&day=4" class="dag-button">Bekijk evenementen</a>
       </div>
     </article>
   </section>

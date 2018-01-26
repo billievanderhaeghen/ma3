@@ -314,7 +314,7 @@ body {
 
 .tags {
   background-color: #ffde67;
-  height: 8rem;
+  height: 6rem;
   display: flex;
   align-items: center;
   /* justify-content: center; */
@@ -525,8 +525,15 @@ body {
 
   /* events */
 
+  .events-home {
+    height: 100rem;
+  }
+
+  .events-agenda {
+    /* fix for height? */
+  }
+
   .event-cards {
-    /* height: 100rem; */
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
@@ -653,6 +660,13 @@ body {
 
   /* agenda */
 
+  .form-basic {
+    height: 23rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+  }
+
   .form-text-input {
     height: 12rem;
     justify-content: center;
@@ -663,7 +677,7 @@ body {
   }
 
   .days {
-    height: 8rem;
+    height: 5.5rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -671,10 +685,16 @@ body {
   }
 
   .day-label {
-    font-size: 2rem;
+    font-size: 1.6rem;
     background-color: var(--red);
-    height: 3rem;
-    padding: 1.2rem;
+    width: 22vw;
+    text-align: center;
+    height: 5.5rem;
+    /* padding: .5rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
 
   .day-label:hover, .day-check:checked + label {

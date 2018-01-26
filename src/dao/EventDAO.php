@@ -116,6 +116,14 @@ class EventDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  public function selectEventByDayId($day) {
+    $sql = "SELECT * FROM `ma3_days` WHERE `day` = :day";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':day', $day);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
   public function selectDayById($id) {
     $sql = "SELECT * FROM `ma3_days` WHERE `id` = :id";
     $stmt = $this->pdo->prepare($sql);

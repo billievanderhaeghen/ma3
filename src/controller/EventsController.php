@@ -91,6 +91,17 @@ class EventsController extends Controller {
         'comparator' => 'like',
         'value' => $_GET["tag"]
       );
+
+    }
+
+    if( !empty( $_GET["day"]) ){
+      // example: search on title
+      $conditions[] = array(
+        'field' => 'day',
+        'comparator' => 'like',
+        'value' => $_GET["day"]
+      );
+
     }
 
     $events = $this->eventDAO->search($conditions);
