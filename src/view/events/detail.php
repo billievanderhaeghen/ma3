@@ -24,8 +24,14 @@
           <dt>start</dt><dd><?php echo $event['start'];?></dd>
           <dt>end</dt><dd><?php echo $event['end'];?></dd>
           <dt>link</dt><dd><?php echo $event['link'];?></dd>
-          <dt>organisers</dt><dd><ul><?php foreach($event['organisers'] as $organiser): ?><li><?php echo $organiser['name'];?></li><?php endforeach;?></ul></dd>
-          <dt>tags</dt><dd><ul><?php foreach($event['tags'] as $tag): ?><li><?php echo $tag['tag'];?></li><?php endforeach;?></ul></dd>
+          <dt>tags</dt>
+          <dd>
+            <ul><?php foreach($tags as $tag): ?>
+              <?php foreach ($tag as $t): ?>
+              <li><?php echo $t['tag'];?></li>
+              <?php endforeach;?></ul>
+            <?php endforeach;?></ul>
+          </dd>
         </dl>
       </article>
   </section>

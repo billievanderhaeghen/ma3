@@ -73,6 +73,18 @@ class EventDAO extends DAO {
   }
 
   public function selectTagsByEventId($eventId) {
+    $tagsByEventId = $this->selectTagIdsByEventId($eventId);
+    $tagsById = array();
+    foreach ($tagsByEventId as $tagByEventId) {
+      // var_dump($tagByEventId);
+      $tagId = $tagByEventId['tag_id'];
+      $tagById = $this->selectTagsByIds($tagId);
+      array_push($tagsById, $tagById);
+    }
+    return $tagsById;
+  }
+
+  public function selectTagIdsByEventId($eventId) {
     $sql = "SELECT * FROM `ma3_auto_events_tags` WHERE `event_id` = :event_id";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':event_id', $eventId);
@@ -80,12 +92,12 @@ class EventDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public function selectTagsById($id) {
+  public function selectTagsByIds($id) {
     $sql = "SELECT * FROM `ma3_auto_tags` WHERE `id` = :id";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id', $id);
     $stmt->execute();
-    return $stmt->fetch(PDO::FETCH_ASSOC);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
   public function selectAll() {
