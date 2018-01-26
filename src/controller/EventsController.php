@@ -28,6 +28,9 @@ class EventsController extends Controller {
     $tags = $this->eventDAO->selectAllTags();
     $this->set('tags', $tags);
 
+    $days = $this->eventDAO->selectAllDays();
+    $this->set('days', $days);
+
     $events = $this->_searchEvents();
 
     if ($this->isAjax) {

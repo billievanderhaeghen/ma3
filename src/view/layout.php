@@ -26,17 +26,6 @@
     <?php echo $css;?>
   </head>
   <body>
-    <header class="header">
-      <div class="header-container">
-        <a class="logo" href="index.php"><div class="logo">WV<br/>DM</div></a>
-        <nav class="navigation">
-          <a class="nav-a agenda" href="index.php?page=agenda"><div class="nav-icon"></div><p>Agenda</p></a>
-          <a class="nav-a praktisch" href="#"><div class="nav-icon"></div><p>Praktisch</p></a>
-          <a class="nav-a nieuws" href="#"><div class="nav-icon"></div><p>Nieuws</p></a>
-        </nav>
-      </div>
-      <a href="index.php"><span class="hidden">Week van de mobiliteit</span></a>
-    </header>
     <div class="container">
       <?php if(!empty($_SESSION['info'])): ?><div class="alert alert-success"><?php echo $_SESSION['info'];?></div><?php endif; ?>
       <?php if(!empty($_SESSION['error'])): ?><div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php endif; ?>

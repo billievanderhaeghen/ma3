@@ -29,6 +29,16 @@ body {
   align-items: center;
 }
 
+.active {
+  border-bottom: 3px solid var(--blue);
+  height: 8rem;
+  width: 18vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 25vw; */
+}
+
 .nav-a {
   color: var(--brown);
   display: flex;
@@ -55,6 +65,14 @@ body {
 
 /* about */
 
+.about {
+  background-color: var(--yellow);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 60rem;
+}
+
 .about-title {
   font-size: 3rem;
   font-family: MairyBook;
@@ -69,9 +87,24 @@ body {
   color: var(--textBrown);
 }
 
+.positioning-about-img {
+  display: flex;
+  justify-content: center;
+  width: 20rem;
+  height: 18.5rem;
+}
+
+.overstap {
+
+  & .positioning-about-img {
+
+    align-items: center;
+  }
+}
+
 /* events */
 
-.events-header {
+.events-header, .ag-header {
   background-image: url(../assets/img/bordershadow_blue.png);
   background-repeat: no-repeat;
   background-position: 97% 13%;
@@ -90,7 +123,7 @@ body {
   text-decoration: none;
 }
 
-.events-title {
+.events-title, .agenda-title {
   font-family: MairyBold;
   font-size: 5rem;
   color: white;
@@ -121,8 +154,9 @@ body {
   z-index: 2;
 
   &:hover {
-    background-image: url(../assets/img/bordershadow_red.png);
-    background-color: var(--red);
+    background-image: url(../assets/img/bordershadow_darkBlue.png);
+    background-position: 97% 87%;
+    background-color: var(--darkerBlue);
   }
 }
 
@@ -209,7 +243,122 @@ body {
 
 }
 
+/* agenda */
+
+.agenda-header {
+  /* height: 29rem; */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.ag-header {
+  background-image: url(../assets/img/bordershadow_yellow.png);
+  background-color: var(--yellow);
+  width: 26rem;
+  margin-top: 2rem;
+}
+
+.header-illustration {
+  position: relative;
+}
+
+.agenda-form {
+  background-color: var(--yellow);
+}
+
+.form-search {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.form-text-input {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-search-input {
+  background-image: url(../assets/img/illustrations_icons_input_search.svg);
+  background-size: 8%;
+  background-position: 95% 50%;
+}
+
+.form-postcode-input {
+  background-image: url(../assets/img/illustrations_icons_input_postcode.svg);
+  background-size: 7%;
+  background-position: 94% 50%;
+}
+
+.form-search-input:focus, .form-postcode-input:focus {
+  outline: none;
+  background-color: white;
+}
+
+.form-search-input, .form-postcode-input {
+  background-repeat: no-repeat;
+  background-color: var(--mellowYellow);
+  border: 0;
+  border-radius: 2rem;
+  height: 4.3rem;
+  padding: 1.5rem;
+  font-size: 2rem;
+  font-family: Nunito;
+  color: var(--brown);
+}
+
+.form-search-input::placeholder, .form-postcode-input::placeholder {
+  color: var(--brown);
+}
+
+.tags {
+  background-color: #ffde67;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* float: left; */
+  width: 100vw;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+.tag-check:checked + label {
+  background-image: url(../assets/img/bordershadow_blue.png);
+  background-repeat: no-repeat;
+  background-position: 93% 10%;
+  background-color: var(--blue);
+  color: white;
+}
+
+.day-label {
+  font-family: MairyBook;
+  color: var(--mellowYellow);
+}
+
+.tag-label {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  height: 5rem;
+  text-transform: uppercase;
+  font-family: MairyBook;
+  padding-top: 1.2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
+  background-color: var(--mellowYellow);
+  border-radius: 2rem;
+  font-size: 2.5rem;
+  color: var(--brown);
+}
+
 @media only screen and (min-width: 1024px) {
+
+  .svg-header-mobile {
+    display: none;
+  }
+
   @keyframes translate {
 
     0% {
@@ -253,7 +402,24 @@ body {
 
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 768px) {
+
+  .header-container {
+    justify-content: space-around;
+    width: 100vw;
+    height: 8rem;
+  }
+
+  .nav-a {
+    width: 25vw;
+    font-size: 1.8rem;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+  }
+}
+
+@media only screen and (max-width: 570px) {
   @keyframes translate {
 
     0% {
@@ -332,7 +498,7 @@ body {
 
   .about {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     height: 105.2rem;
   }
@@ -360,7 +526,7 @@ body {
   /* events */
 
   .event-cards {
-    height: 100rem;
+    /* height: 100rem; */
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
@@ -371,7 +537,7 @@ body {
     justify-content: center;
   }
 
-  .events-header {
+  .events-header, {
     width: 26rem;
     margin-top: -1.3rem;
   }
@@ -485,6 +651,37 @@ body {
     justify-content: space-around;
   }
 
+  /* agenda */
+
+  .form-text-input {
+    height: 12rem;
+    justify-content: center;
+  }
+
+  .form-search-input, .form-postcode-input {
+    width: 28rem;
+  }
+
+  .days {
+    height: 8rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+  }
+
+  .day-label {
+    font-size: 2rem;
+    background-color: var(--red);
+    height: 3rem;
+    padding: 1.2rem;
+  }
+
+  .day-label:hover, .day-check:checked + label {
+    background-color: var(--blue);
+    color: var(--mellowYellow);
+  }
+
 }
 
 .tram {
@@ -495,25 +692,17 @@ body {
   animation: translateback 1.2s ease-out normal;
 }
 
-.header-home {
+.header-home, .agenda-header {
   background-color: var(--mellowYellow);
-}
-
-.about {
-  background-color: var(--yellow);
 }
 
 .article-about {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .dagen {
   background-color: var(--blue);
-
-  & article {
-    /* background-color: white; */
-  }
 }

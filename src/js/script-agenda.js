@@ -6,6 +6,9 @@
   const $results = document.querySelector(`.results`);
 
   const init = () => {
+    const submitButton = document.querySelector(`form input[type=submit]`);
+    submitButton.style.display = `none`;
+
     $searchInput.addEventListener(`input`, handleInputSearch);
     $postalInput.addEventListener(`input`, handleInputPostal);
     // console.log($tagInput);
