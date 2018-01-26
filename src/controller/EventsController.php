@@ -18,13 +18,6 @@ class EventsController extends Controller {
 
   public function agenda() {
 
-    //link to the webpack-dev-server livereload script in development mode
-    $this->set('jsfilter', '<script src="http://localhost:8080/js/script-agenda.js"></script>');
-    if($this->env == 'production') {
-      //link to the generated javascript file in production mode
-      $this->set('jsfilter', '<script src="js/script-agenda.js"></script>');
-    }
-
     $tags = $this->eventDAO->selectAllTags();
     $this->set('tags', $tags);
 

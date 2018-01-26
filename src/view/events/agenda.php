@@ -68,4 +68,3 @@
     </div>
   </section>
 </main>
-<?php echo $jsfilter;?>
