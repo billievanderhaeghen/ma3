@@ -19,11 +19,7 @@
     </div>
   </section>
   <section class="agenda-form">
-    <?php
-    function getAddress() {
-      // $protocol = $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
-      return '://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-    } ?>
+    <p class="day-check hidden"><?php if($_GET["day"]){ $day = $_GET["day"]; echo $day;} ?></p>
     <form class="form-search" action="index.php" method="get">
       <div class="form-basic">
         <div class="form-text-input">

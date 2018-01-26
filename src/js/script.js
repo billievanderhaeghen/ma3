@@ -5,6 +5,7 @@
   let $tagInput;
   let $dayInput;
   let $results;
+  let $dayCheck;
 
   const init = () => {
     if (document.querySelector(`form`)) {
@@ -20,12 +21,23 @@
 
       $searchInput.addEventListener(`input`, fetchHandler);
       $postalInput.addEventListener(`input`, fetchHandler);
+
       $tagInput.forEach($tag => {
         $tag.addEventListener(`change`, fetchHandler);
       });
+
       $dayInput.forEach($day => {
+        if(document.querySelector(`.day-check`)) {
+          $dayCheck = document.querySelector(`.day-check`);
+          if ($dayCheck.innerHTML === $day.attributes.value.value) {
+            $day.setAttribute(`checked`, true);
+            console.log($day);
+            console.log(`yas`);
+          }
+        }
         $day.addEventListener(`change`, fetchHandler);
       });
+
     }
 
   };
