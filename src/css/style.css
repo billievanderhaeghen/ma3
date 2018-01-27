@@ -920,7 +920,11 @@ body {
   animation: translateback 1.2s ease-out normal;
 }
 
-.header-home, .agenda-header {
+.header-home {
+  background-color: var(--yellow);
+}
+
+.agenda-header {
   background-color: var(--mellowYellow);
 }
 
