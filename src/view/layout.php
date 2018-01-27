@@ -5,6 +5,7 @@
     <title>Mobillieteit</title>
     <meta name="author" content="Billie Vanderhaeghen">
     <meta name="description" content="Week van de mobiliteit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
     WebFontConfig = {
      google: {
@@ -27,9 +28,6 @@
   </head>
   <body>
     <div class="container">
-      <?php if(!empty($_SESSION['info'])): ?><div class="alert alert-success"><?php echo $_SESSION['info'];?></div><?php endif; ?>
-      <?php if(!empty($_SESSION['error'])): ?><div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php endif; ?>
-
       <?php echo $content; ?>
     </div>
     <footer class="footer">

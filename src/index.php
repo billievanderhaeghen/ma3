@@ -23,13 +23,17 @@ $routes = array(
     'controller' => 'Events',
     'action' => 'detail'
   ),
+  'notfound' => array(
+    'controller' => 'Events',
+    'action' => 'notfound'
+  )
 );
 
 if(empty($_GET['page'])) {
   $_GET['page'] = 'home';
 }
 if(empty($routes[$_GET['page']])) {
-  header('Location: index.php');
+  header('Location: index.php?page=notfound');
   exit();
 }
 

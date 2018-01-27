@@ -59,12 +59,20 @@
   };
 
   const parse = results => {
-    $results.innerHTML = results
-      .map(product => createEventCard(product))
-      .join(``);
+    console.log(results.length);
+    if (results.length > 0) {
+      $results.innerHTML = results
+        .map(product => createEventCard(product))
+        .join(``);
+    } else {
+      $results.innerHTML = `<div class="results-space"></div>
+      <p class="no-results">Sorry, er zijn evenementen gevonden</p>
+      <div class="results-space"></div>`;
+    }
   };
 
   const createEventCard = result => {
+    // console.log(result.id.len);
     return `<article class="event-card">
       <a class="card-link" href="index.php?page=detail&amp;id=${result.id}">
       <img class="event-card-img"

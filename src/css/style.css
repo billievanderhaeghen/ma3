@@ -170,6 +170,48 @@ body {
   color: white;
 }
 
+.no-results {
+  font-size: 2rem;
+  color: var(--brown);
+}
+
+/* 404 */
+
+.notfound-header {
+  background-color: var(--yellow);
+}
+
+.notfound-section {
+  background-color: var(--yellow);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.notfound-error {
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  color: white;
+}
+
+.notfound-a {
+  background-image: url(../assets/img/bordershadow_red.png);
+  width: 18rem;
+  height: 4.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red);
+
+  @apply --my-radius-rect;
+  font-size: 3.4rem;
+  font-family: MairyBold;
+  text-decoration: none;
+  color: white;
+}
+
 /* footer */
 
 .partner-link div {
@@ -642,7 +684,7 @@ body {
   }
 
   .results-space {
-    height: 1.5rem;
+    height: 2rem;
   }
 
   .results .events-agenda {
@@ -662,6 +704,10 @@ body {
 
   .events-title {
     width: 20rem;
+  }
+
+  .no-results {
+    text-align: center;
   }
 
   /* dagen */
@@ -858,6 +904,10 @@ body {
     grid-row: 2;
     display: flex;
     justify-content: center;
+  }
+
+  .notfound-section {
+    height: 16rem;
   }
 
 }

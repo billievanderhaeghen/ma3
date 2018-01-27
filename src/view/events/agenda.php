@@ -46,6 +46,9 @@
   <section class="results">
     <div class="event-cards events-agenda">
       <div class="results-space"></div>
+      <?php if(!$events): ?>
+        <p class="no-results">Sorry, er zijn evenementen gevonden</p>
+      <?php endif; ?>
       <?php foreach($events as $event): ?>
         <article class="event-card">
           <a class="card-link" href="index.php?page=detail&amp;id=<?php echo $event["id"]; ?>">
