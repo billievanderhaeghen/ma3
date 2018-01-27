@@ -42,7 +42,7 @@
                <p class="details-datum"><?php echo $date;?></p>
                <p class="details-uur"><?php echo $time;?></p>
              </div>
-             <a class="details-link" href="<?php echo $event['link'];?>">over organisatie</a>
+             <a class="details-link" href="<?php echo $event['link'];?>">over <?php echo $day['name'] ?></a>
              <ul class="details-tags">
                <?php foreach($tags as $tag): ?>
                      <?php foreach ($tag as $t): ?>

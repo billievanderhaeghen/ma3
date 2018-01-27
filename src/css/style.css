@@ -152,7 +152,7 @@ body {
   border: 3px solid white;
   background-color: var(--blue);
   width: 30rem;
-  height: 7rem;
+  /* height: 7rem; */
   padding: 1.4rem;
   margin-top: -2rem;
   z-index: 2;
@@ -361,7 +361,8 @@ body {
 
 .details-header {
   display: grid;
-  height: 7rem;
+  /* height: 7rem; */
+  grid-gap: 1rem;
   align-items: flex-end;
   justify-content: center;
 }
@@ -374,6 +375,7 @@ body {
 }
 
 .breadcrumbs {
+  margin-top: 2rem;
   color: var(--textBrown);
   font-size: 1.6rem;
 
@@ -635,17 +637,17 @@ body {
   /* events */
 
   .events-home {
-    height: 100rem;
+    display: grid;
+    grid-gap: 2rem;
   }
 
-  .events-agenda {
-    /* fix for height? */
+  .results-space {
+    height: 1.5rem;
   }
 
-  .event-cards {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
+  .results .events-agenda {
+    display: grid;
+    grid-gap: 2rem;
   }
 
   .event-card {
@@ -653,7 +655,7 @@ body {
     justify-content: center;
   }
 
-  .events-header, {
+  .events-header {
     width: 26rem;
     margin-top: -1.3rem;
   }
@@ -723,6 +725,7 @@ body {
   .dag-button {
     @apply --my-radius-rect;
 
+    align-items: center;
     width: 80vw;
     height: 4.5rem;
     justify-content: center;

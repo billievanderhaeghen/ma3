@@ -45,6 +45,7 @@
   </section>
   <section class="results">
     <div class="event-cards events-agenda">
+      <div class="results-space"></div>
       <?php foreach($events as $event): ?>
         <article class="event-card">
           <a class="card-link" href="index.php?page=detail&amp;id=<?php echo $event["id"]; ?>">
@@ -62,6 +63,7 @@
           </a>
         </article>
       <?php endforeach;?>
+      <div class="results-space"></div>
     </div>
   </section>
 </main>
