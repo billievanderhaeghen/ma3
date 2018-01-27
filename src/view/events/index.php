@@ -62,7 +62,8 @@
           <div class="event-card-info">
             <header class="event-card-header">
               <h2 class="event-card-title"><?php echo $event['title']; ?></h2>
-              <p class="event-card-start"><?php echo $event['start']; ?></p>
+              <?php $date = date('d/m', strtotime($event['start']));?>
+              <p class="event-card-start"><?php echo $date; ?></p>
             </header>
           </div>
           </a>

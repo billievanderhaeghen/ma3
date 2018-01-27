@@ -32,8 +32,9 @@
           </header>
           <div class="details-div">
             <p class="details-address"><?php echo $event['address'];?>, <?php echo $event['city'];?></p>
-            <p class="details-datum"><?php echo $event['start'];?></p>
-            <p class="details-uur"><?php echo $event['start'];?></p>
+            <?php $date = date('d/m', strtotime($event['start'])); $time = date('h:i', strtotime($event['start'])); ?>
+            <p class="details-datum"><?php echo $date;?></p>
+            <p class="details-uur"><?php echo $time;?></p>
             <p class="details-link"><?php echo $event['link'];?></p>
             <ul>
               <?php foreach($tags as $tag): ?>
