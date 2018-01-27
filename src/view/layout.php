@@ -32,20 +32,22 @@
       <?php echo $content; ?>
     </div>
     <footer class="footer">
-      <div class="partners">
-        <h3>Partners:</h3>
-        <div class="links">
-          <a href="#" class="partner-link"><div class="vlaanderen-img"></div></a>
-          <a href="#" class="partner-link"><div class="nmbs-img"></div></a>
-          <a href="#" class="partner-link"><div class="lijn-img"></div></a>
+      <div class="footer">
+        <div class="partners">
+          <h3>Partners:</h3>
+          <div class="links">
+            <a href="#" class="partner-link"><div class="vlaanderen-img"></div></a>
+            <a href="#" class="partner-link"><div class="nmbs-img"></div></a>
+            <a href="#" class="partner-link"><div class="lijn-img"></div></a>
+          </div>
         </div>
-      </div>
-      <div class="social">
-        <h3>Volg ons:</h3>
-        <div class="links">
-          <a href="#" class="social-link"><div class="fb-img"></div></a>
-          <a href="#" class="social-link"><div class="tw-img"></div></a>
-          <a href="#" class="social-link"><div class="ig-img"></div></a>
+        <div class="social">
+          <h3>Volg ons:</h3>
+          <div class="links">
+            <a href="#" class="social-link"><div class="fb-img"></div></a>
+            <a href="#" class="social-link"><div class="tw-img"></div></a>
+            <a href="#" class="social-link"><div class="ig-img"></div></a>
+          </div>
         </div>
       </div>
     </footer>

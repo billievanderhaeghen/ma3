@@ -71,7 +71,7 @@
     <div class="event-cards events-home">
       <div class="results-space"></div>
       <?php foreach($events as $event): ?>
-        <article class="event-card">
+        <article class="event-card home-event<?php echo $event["id"]; ?>">
           <a class="card-link" href="index.php?page=detail&amp;id=<?php echo $event["id"]; ?>">
           <img class="event-card-img"
               src="assets/img/events/<?php echo $event["code"];?>/1.jpg"

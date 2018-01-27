@@ -29,16 +29,6 @@ body {
   align-items: center;
 }
 
-.active {
-  border-bottom: 3px solid var(--blue);
-  height: 8rem;
-  width: 18vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* width: 25vw; */
-}
-
 .nav-a {
   color: var(--brown);
   display: flex;
@@ -80,7 +70,6 @@ body {
 }
 
 .about-p {
-  width: 28.5rem;
   font-size: 1.6rem;
   text-align: center;
   font-weight: bolder;
@@ -92,19 +81,14 @@ body {
   justify-content: center;
   width: 20rem;
   height: 18.5rem;
-}
-
-.overstap {
-
-  & .positioning-about-img {
-
-    align-items: center;
-  }
+  align-items: center;
 }
 
 /* events */
 
 .events-header, .ag-header {
+  width: 26rem;
+  margin-top: -1.3rem;
   background-image: url(../assets/img/bordershadow_blue.png);
   background-repeat: no-repeat;
   background-position: 97% 13%;
@@ -213,6 +197,14 @@ body {
 }
 
 /* footer */
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1.6rem;
+  font-family: MairyBook;
+  color: var(--red);
+}
 
 .partner-link div {
   background-image: url(../assets/img/icons_partner.png);
@@ -506,93 +498,262 @@ body {
   margin-right: .8rem;
 }
 
-@media only screen and (min-width: 1024px) {
-
-  .svg-header-mobile {
-    display: none;
-  }
-
-  @keyframes translate {
-
-    0% {
-      transform: translateX(90rem);
-    }
-
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes translateback {
-
-    0% {
-      transform: translateX(-40rem);
-    }
-
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  .navigation {
-    width: 55rem;
-  }
+@media only screen and (min-width: 1025px) {
 
   .header-container {
-    justify-content: space-betweem;
-    width: 86vw;
-    height: 9rem;
-  }
-
-  .nav-a {
-    font-size: 3.6rem;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-  }
-
-}
-
-@media only screen and (max-width: 768px) {
-
-  .header-container {
-    justify-content: space-around;
-    width: 100vw;
+    justify-content: space-between;
+    width: 90vw;
     height: 8rem;
   }
 
   .nav-a {
-    width: 25vw;
-    font-size: 1.8rem;
+    width: 18vw;
+    font-size: 3rem;
     justify-content: center;
     align-items: center;
     flex-flow: column;
   }
+
+  .events-home {
+    display: grid;
+    grid-template-columns: repeat(3, 40rem);
+    justify-content: center;
+    grid-gap: 2rem;
+    height: 40rem;
+  }
+
+  .home-event1 {
+    display: none;
+  }
+
+  .home-event4 {
+    grid-column: 1;
+  }
+
+  .about {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    height: 45rem;
+  }
+
+  .article-about {
+    width: 35vw;
+  }
+
+  .about-p {
+    width: 20vw;
+  }
+
+  .dagen {
+    height: 67rem;
+  }
+
+  .dag-img {
+    width: 100%;
+  }
+
+  .dagen-article {
+    width: 32rem;
+  }
+
+  .dag-button {
+    width: 23rem;
+  }
+
+  /* footer */
+
+  .footer {
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 9rem;
+  }
+
+  .partners .links, .social .links {
+    display: flex;
+  }
+
+  .social .links {
+    display: flex;
+    justify-content: space-between;
+    width: 16rem;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .header-container {
+    justify-content: space-between;
+    width: 90vw;
+    height: 8rem;
+  }
+
+  .nav-a {
+    width: 18vw;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+  }
+
+  .events-home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .home-event1 {
+    display: none;
+  }
+
+  .home-event4 {
+    grid-column: 1;
+  }
+
+  .about {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    height: 45rem;
+  }
+
+  .about-article {
+    width: 35vw;
+  }
+
+  .about-p {
+    width: 30vw;
+  }
+
+  .dagen {
+    height: 67rem;
+  }
+
+  .dag-img {
+    width: 23rem;
+  }
+
+  .dagen-article {
+    width: 31vw;
+  }
+
+  .dag-button {
+    width: 23rem;
+  }
+
+  /* footer */
+
+  .footer {
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 9rem;
+  }
+
+  .partners .links, .social .links {
+    display: flex;
+  }
+
+  .social .links {
+    display: flex;
+    justify-content: space-between;
+    width: 16rem;
+  }
+
+}
+
+@media only screen and (max-width: 749px) {
+
+  /* header */
+
+  .header-container {
+    justify-content: space-between;
+    width: 90vw;
+    height: 8rem;
+  }
+
+  .nav-a {
+    width: 18vw;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+  }
+
+  .events-home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .article-about {
+    width: 25rem;
+  }
+
+  .about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 67rem;
+  }
+
+  .home-event1 {
+    display: block;
+    grid-column: 1;
+  }
+
+  .home-event4 {
+    grid-column: 2;
+  }
+
+  .dagen {
+    height: 118rem;
+  }
+
+  .dagen-article {
+    width: 47vw;
+  }
+
+  .strapdag {
+    width: 53vw;
+  }
+
+  .dag-button {
+    width: 23rem;
+  }
+
+  /* footer */
+
+  .footer {
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 9rem;
+  }
+
+  .partners .links, .social .links {
+    display: flex;
+  }
+
+  .social .links {
+    display: flex;
+    justify-content: space-between;
+    width: 16rem;
+  }
+
 }
 
 @media only screen and (max-width: 570px) {
-  @keyframes translate {
 
-    0% {
-      transform: translateX(20em);
-    }
-
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes translateback {
-
-    0% {
-      transform: translateX(-20rem);
-    }
-
-    100% {
-      transform: translateX(0);
-    }
+  .events-home {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
   }
 
   /* header */
@@ -609,6 +770,15 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column;
+  }
+
+  .active {
+    border-bottom: 3px solid var(--blue);
+    height: 8rem;
+    width: 18vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .nav-icon {
@@ -653,11 +823,16 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    height: 105.2rem;
+    height: 90rem;
+  }
+
+  .about-p {
+    width: 28.5rem;
   }
 
   .article-about {
     height: 27rem;
+    width: 28.5rem;
   }
 
   .positioning-about-img {
@@ -667,21 +842,7 @@ body {
     height: 15.5rem;
   }
 
-  .overstap {
-
-    margin-top: -5rem;
-
-    & .positioning-about-img {
-      align-items: flex-end;
-    }
-  }
-
   /* events */
-
-  .events-home {
-    display: grid;
-    grid-gap: 2rem;
-  }
 
   .results-space {
     height: 2rem;
@@ -692,14 +853,13 @@ body {
     grid-gap: 2rem;
   }
 
+  .home-event4 {
+    grid-column: 1;
+  }
+
   .event-card {
     display: flex;
     justify-content: center;
-  }
-
-  .events-header {
-    width: 26rem;
-    margin-top: -1.3rem;
   }
 
   .events-title {
@@ -713,90 +873,22 @@ body {
   /* dagen */
 
   .dagen {
-    display: flex;
-    flex-flow: column nowrap;
-    height: 200rem;
-    justify-content: space-around;
+    height: 180rem;
   }
 
   .dagen-article {
-    background-color: white;
-    border-radius: 2rem;
     width: 90vw;
-    align-self: center;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    padding: 1.5rem;
-  }
-
-  .carfree .date-border {
-    width: 22rem;
-  }
-
-  .date-border {
-    background-color: var(--blue);
-    color: white;
-    height: 4rem;
-    width: 10rem;
-    font-size: 3rem;
-    font-weight: bold;
-    border-radius: 2rem;
-    display: flex;
-    align-self: flex-end;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .dag-div {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: space-around;
-    height: 48rem;
-  }
-
-  .dag-title {
-    font-size: 3.5rem;
-    font-family: MairyBook;
-    color: var(--red);
-  }
-
-  .dag-p {
-    font-size: 1.7rem;
-    text-align: center;
-    color: var(--textBrown);
   }
 
   .dag-button {
-    @apply --my-radius-rect;
-
-    align-items: center;
     width: 80vw;
-    height: 4.5rem;
-    justify-content: center;
-    background-color: var(--yellow);
-    font-size: 2.8rem;
-    font-family: MairyBook;
-    color: var(--textBrown);
-    background-image: url(../assets/img/bordershadow_yellow.png);
-
-    &:hover {
-      color: white;
-      background-color: var(--blue);
-      background-image: url(../assets/img/bordershadow_blue.png);
-    }
   }
 
   /* footer */
 
   .footer {
-    display: flex;
-    flex-flow: row wrap;
     height: 22rem;
     justify-content: center;
-    font-size: 1.6rem;
-    font-family: MairyBook;
   }
 
   .partners {
@@ -805,7 +897,6 @@ body {
     justify-content: center;
 
     & h3 {
-      color: var(--red);
       width: 93vw;
     }
   }
@@ -912,14 +1003,6 @@ body {
 
 }
 
-.tram {
-  animation: translate 1s ease-out normal;
-}
-
-.skateboard {
-  animation: translateback 1.2s ease-out normal;
-}
-
 .header-home {
   background-color: var(--yellow);
 }
@@ -933,4 +1016,73 @@ body {
 
 .dagen {
   background-color: var(--blue);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.dagen-article {
+  background-color: white;
+  border-radius: 2rem;
+  align-self: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.carfree .date-border {
+  width: 22rem;
+}
+
+.date-border {
+  background-color: var(--blue);
+  color: white;
+  height: 4rem;
+  width: 10rem;
+  font-size: 3rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+
+.dag-div {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 48rem;
+}
+
+.dag-title {
+  font-size: 3.5rem;
+  font-family: MairyBook;
+  color: var(--red);
+}
+
+.dag-p {
+  font-size: 1.7rem;
+  text-align: center;
+  color: var(--textBrown);
+}
+
+.dag-button {
+  @apply --my-radius-rect;
+  align-items: center;
+  height: 4.5rem;
+  justify-content: center;
+  background-color: var(--yellow);
+  font-size: 2.8rem;
+  font-family: MairyBook;
+  color: var(--textBrown);
+  background-image: url(../assets/img/bordershadow_yellow.png);
+
+  &:hover {
+    color: white;
+    background-color: var(--blue);
+    background-image: url(../assets/img/bordershadow_blue.png);
+  }
 }
