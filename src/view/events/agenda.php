@@ -27,12 +27,10 @@
           assets/img/illustrations_agenda_desktop.svg 1024w,
           assets/img/illustrations_agenda_desktopHD.svg 1440w"
 
-          sizes="(max-width: 320px) 100vw,
-          (max-width: 768px) 100vw,
-          (max-width: 1024px) 100vw,
-          (min-width: 1025px) 100vw,"
+          sizes="100vw"
           alt="404 not found">
         </div>
+      </picture>
   </section>
   <section class="agenda-form">
     <p class="day-check hidden"><?php if($_GET["day"]){ $day = $_GET["day"]; echo $day;} ?></p>

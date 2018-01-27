@@ -25,7 +25,7 @@ class Controller {
       //link to the css file in production mode instead of no-css
       $this->set('css', '<link rel="stylesheet" href="css/style.css">');
       //link to the generated javascript file in production mode
-      $this->set('js', '<script src="js/script.js"></script>');
+      $this->set('js', '<script async src="js/script.js"></script>');
     }
     //call the correct function in the controller
     call_user_func(array($this, $this->route['action']));

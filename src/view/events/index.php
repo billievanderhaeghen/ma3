@@ -13,6 +13,9 @@
 </header>
 <main>
   <section class="header-home">
+    <header>
+      <h2 class="hidden">Home</h2>
+    </header>
     <picture class="banner-img">
       <source media="(max-width: 320px)" srcset="assets/img/illustrations_home_mobile.svg" type="image/svg+xml" />
       <source media="(max-width: 768px)" srcset="assets/img/illustrations_home_tablet.svg" type="image/svg+xml" />
@@ -25,11 +28,9 @@
         assets/img/illustrations_home_desktop.svg 1024w,
         assets/img/illustrations_home_desktopHD.svg 1440w"
 
-        sizes="(max-width: 320px) 100vw,
-        (max-width: 768px) 100vw,
-        (max-width: 1024px) 100vw,
-        (min-width: 1025px) 100vw,"
-        alt="404 not found">
+        sizes="100vw"
+        src="assets/img/illustrations_home_desktopHD.svg" alt="404 not found">
+      </picture>
   </section>
   <section class="about">
     <header class="hidden">

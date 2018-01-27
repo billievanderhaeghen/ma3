@@ -24,6 +24,7 @@
       s.parentNode.insertBefore(wf, s);
    })(document);
    </script>
+    <?php echo $js;?>
     <?php echo $css;?>
   </head>
   <body>
@@ -48,6 +49,5 @@
         </div>
       </div>
     </footer>
-    <?php echo $js;?>
   </body>
 </html>
