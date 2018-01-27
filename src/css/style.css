@@ -353,6 +353,28 @@ body {
   color: var(--brown);
 }
 
+/* detail */
+
+.details-section {
+  background-color: var(--yellow);
+  color: white;
+  position: relative;
+  z-index: -3;
+}
+
+.details-article {
+  display: grid;
+}
+
+.details {
+  background-color: var(--blue);
+  padding: 2rem;
+  width: 90vw;
+
+  @apply --my-radius-rect;
+  flex-flow: column nowrap;
+}
+
 @media only screen and (min-width: 1024px) {
 
   .svg-header-mobile {
@@ -700,6 +722,20 @@ body {
   .day-label:hover, .day-check:checked + label {
     background-color: var(--blue);
     color: var(--mellowYellow);
+  }
+
+  /* details */
+
+  .details-article {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    grid-template-rows: repeat(6, mincontent);
+  }
+
+  .details {
+    grid-row: 4;
+    grid-column: 1;
+    align-self: center;
   }
 
 }

@@ -10,37 +10,43 @@
   <a href="index.php"><span class="hidden">Week van de mobiliteit</span></a>
 </header>
 <main>
-  <section>
-      <article class="breadcrumbs">
-        <a href="index.php?agenda">Agenda</a><p>></p><a href="index.php?page=agenda&day=<?php echo $day['id'] ?>"><?php echo $day['name'] ?></a>
-      </article>
-      <article>
-        <header><h2><?php echo $event['title']; ?></h2></header>
+  <section class="details-section">
+      <article class="details-article">
+        <div class="breadcrumbs">
+          <a href="index.php?page=agenda">Agenda</a> >
+          <a href="index.php?page=agenda&day=<?php echo $day['id'] ?>"><?php echo $day['name'] ?></a> >
+          <a href="index.php?page=detail&amp;id=<?php echo $event['id'] ?>"><?php echo $event['title'] ?></a>
+        </div>
+        <header><h2 class="detail-header-title"><?php echo $event['title']; ?></h2></header>
         <img class="event-card-img"
             src="assets/img/events/<?php echo $event["code"];?>/1.jpg"
             height="214" width="320"
              alt="blog-image">
-        <dl>
-          <dt>code</dt><dd><?php echo $event['code'];?></dd>
-          <dt>content</dt><dd><?php echo $event['content'];?></dd>
-          <dt>practical</dt><dd><?php echo $event['practical'];?></dd>
-          <dt>location</dt><dd><?php echo $event['location'];?></dd>
-          <dt>address</dt><dd><?php echo $event['address'];?></dd>
-          <dt>postal</dt><dd><?php echo $event['postal'];?></dd>
-          <dt>city</dt><dd><?php echo $event['city'];?></dd>
-          <dt>start</dt><dd><?php echo $event['start'];?></dd>
-          <dt>end</dt><dd><?php echo $event['end'];?></dd>
-          <dt>link</dt><dd><?php echo $event['link'];?></dd>
-          <dt>tags</dt>
-          <dd>
-            <ul><?php foreach($tags as $tag): ?>
-                  <?php foreach ($tag as $t): ?>
-                    <li><?php echo $t['tag'];?></li>
+       <div class="details-text">
+         <p class="details-content"><?php echo $event['content'];?></p>
+         <p class="details-practical"><?php echo $event['practical'];?></p>
+       </div>
+        <div class="details">
+          <header>
+            <h3 class="detail-header-h3"><?php echo $day['name'] ?></h3>
+          </header>
+          <div class="details-div">
+            <p class="details-address"><?php echo $event['address'];?>, <?php echo $event['city'];?></p>
+            <p class="details-datum"><?php echo $event['start'];?></p>
+            <p class="details-uur"><?php echo $event['start'];?></p>
+            <p class="details-link"><?php echo $event['link'];?></p>
+            <ul>
+              <?php foreach($tags as $tag): ?>
+                    <?php foreach ($tag as $t): ?>
+                      <li><?php echo $t['tag'];?></li>
+                    <?php endforeach;?>
                   <?php endforeach;?>
-                <?php endforeach;?>
             </ul>
-          </dd>
-        </dl>
+          </div>
+        </div>
       </article>
+      <section class="related-events">
+
+      </section>
   </section>
 </main>
