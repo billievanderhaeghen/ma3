@@ -29,7 +29,7 @@
         assets/img/illustrations_home_desktopHD.svg 1440w"
 
         sizes="100vw"
-        src="assets/img/illustrations_home_desktopHD.svg" alt="404 not found">
+        src="assets/img/illustrations_home_desktopHD.svg" alt="header afbeelding week van de mobiliteit">
       </picture>
   </section>
   <section class="about">
@@ -73,10 +73,13 @@
       <?php foreach($events as $event): ?>
         <article class="event-card home-event<?php echo $event["id"]; ?>">
           <a class="card-link" href="index.php?page=detail&amp;id=<?php echo $event["id"]; ?>">
-          <img class="event-card-img"
-              src="assets/img/events/<?php echo $event["code"];?>/1.jpg"
-              height="214" width="320"
-               alt="blog-image">
+          <picture>
+            <source type="image/webp" srcset="assets/img/events/<?php echo $event["code"];?>/1.webp">
+            <img class="event-card-img"
+                src="assets/img/events/<?php echo $event["code"];?>/1.jpg"
+                height="214" width="320"
+                 alt="event-image">
+          </picture>
           <div class="event-card-info">
             <header class="event-card-header">
               <h2 class="event-card-title"><?php echo $event['title']; ?></h2>

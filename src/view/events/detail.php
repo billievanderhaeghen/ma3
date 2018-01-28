@@ -11,6 +11,9 @@
 </header>
 <main>
   <section class="details-section">
+      <header>
+        <h2 class="hidden">details</h2>
+      </header>
       <article class="details-article">
         <header class="details-header">
           <h2 class="detail-header-title"><?php echo $event['title']; ?></h2>
@@ -55,6 +58,9 @@
        </section>
       </article>
       <section class="related-events">
+        <header>
+          <h2 class="hidden">gerelateerde events</h2>
+        </header>
 
       </section>
   </section>

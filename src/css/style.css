@@ -516,7 +516,7 @@ body {
 
   .events-home {
     display: grid;
-    grid-template-columns: repeat(3, 40rem);
+    grid-template-columns: repeat(3, 34rem);
     justify-content: center;
     grid-gap: 2rem;
     height: 40rem;
@@ -601,15 +601,13 @@ body {
 
   .events-home {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 37rem);
+    justify-content: center;
     grid-gap: 2rem;
   }
 
   .home-event1 {
-    display: none;
-  }
-
-  .home-event4 {
+    display: block;
     grid-column: 1;
   }
 

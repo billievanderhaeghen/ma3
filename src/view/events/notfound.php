@@ -27,8 +27,7 @@
         assets/img/illustrations_404_desktopHD.svg 1440w"
 
         sizes="100vw"
-        alt="404 not found">
-      </picture>
+        src="assets/img/illustrations_404_desktopHD.svg" alt="404 not found">
     </picture>
   </header>
   <main>

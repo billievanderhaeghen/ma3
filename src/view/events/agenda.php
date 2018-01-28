@@ -28,11 +28,14 @@
           assets/img/illustrations_agenda_desktopHD.svg 1440w"
 
           sizes="100vw"
-          alt="404 not found">
-        </div>
+          src="assets/img/illustrations_agenda_desktopHD.svg" alt="fiets">
       </picture>
+    </div>
   </section>
   <section class="agenda-form">
+    <header>
+      <h2 class="hidden">agenda form</h2>
+    </header>
     <p class="day-check hidden"><?php if($_GET["day"]){ $day = $_GET["day"]; echo $day;} ?></p>
     <form class="form-search" action="index.php" method="get">
       <div class="form-basic">
@@ -42,8 +45,8 @@
         </div>
         <div class="days">
           <?php foreach($days as $day): ?>
-            <input type="radio" name="day" class="hidden day-check" id="<?php echo $day['name'] ?>" value="<?php echo $day['id'] ?>">
-            <label class="day-label" for="<?php echo $day['name'] ?>"><?php echo $day['name'] ?></label>
+            <input type="radio" name="day" class="hidden day-check" id="<?php echo $day['id'] ?>" value="<?php echo $day['id'] ?>">
+            <label class="day-label" for="<?php echo $day['id'] ?>"><?php echo $day['name'] ?></label>
           <?php endforeach; ?>
         </div>
       </div>
@@ -58,6 +61,9 @@
     </form>
   </section>
   <section class="results">
+    <header>
+      <h2 class="hidden">resultaten</h2>
+    </header>
     <div class="event-cards events-agenda">
       <div class="results-space"></div>
       <?php if(!$events): ?>
