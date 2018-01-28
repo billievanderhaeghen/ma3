@@ -24,10 +24,13 @@
           </div>
         </header>
         <div class="details-img-div">
-          <img class="details-img"
-              src="assets/img/events/<?php echo $event["code"];?>/1.jpg"
-              height="214" width="320"
-               alt="blog-image">
+          <picture class="details-img">
+            <source type="image/webp" srcset="assets/img/events/<?php echo $event["code"];?>/1.webp">
+            <img class="details-img"
+                src="assets/img/events/<?php echo $event["code"];?>/1.jpg"
+                height="214" width="320"
+                 alt="event-image">
+          </picture>
         </div>
        <div class="details-text">
          <p class="details-content"><?php echo $event['content'];?></p>

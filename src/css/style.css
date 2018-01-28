@@ -27,6 +27,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .nav-a {
@@ -38,6 +39,10 @@ body {
   &:hover {
     color: var(--textBlue);
   }
+}
+
+.active {
+  color: var(--textBlue);
 }
 
 .header-container {
@@ -425,8 +430,9 @@ body {
 .details-header {
   display: grid;
   grid-gap: 1rem;
+  grid-column: 1 / span 2;
   align-items: flex-end;
-  justify-content: center;
+  margin-left: 9vw;
 }
 
 .detail-header-title {
@@ -461,6 +467,12 @@ body {
   & strong {
     background-color: var(--blue);
     font-weight: bold;
+  }
+
+  & span {
+    color: var(--brown);
+    font-weight: bold;
+    text-transform: uppercase;
   }
 }
 
@@ -546,8 +558,12 @@ body {
     height: 8rem;
   }
 
+  .navigation {
+    width: 30vw;
+  }
+
   .nav-a {
-    width: 18vw;
+    width: 15vw;
     font-size: 3rem;
     justify-content: center;
     align-items: center;

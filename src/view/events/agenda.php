@@ -52,8 +52,8 @@
       </div>
       <div class="tags">
         <?php foreach($tags as $tag): ?>
-          <input type="checkbox" name="tag" class="hidden tag-check" id="<?php echo $tag['tag'] ?>" value="<?php echo $tag['tag'] ?>">
-          <label class="tag-label label<?php echo $tag['id'] ?>" for="<?php echo $tag['tag'] ?>"><?php echo $tag['tag'] ?></label>
+          <input type="checkbox" name="tag" class="hidden tag-check" id="tag<?php echo $tag['id'] ?>" value="<?php echo $tag['tag'] ?>">
+          <label class="tag-label label<?php echo $tag['id'] ?>" for="tag<?php echo $tag['id'] ?>"><?php echo $tag['tag'] ?></label>
         <?php endforeach; ?>
       </div>
       <input type="hidden" name="page" value="agenda">
@@ -72,10 +72,13 @@
       <?php foreach($events as $event): ?>
         <article class="event-card">
           <a class="card-link" href="index.php?page=detail&amp;id=<?php echo $event["id"]; ?>">
-          <img class="event-card-img"
-              src="assets/img/events/<?php echo $event["code"];?>/1.jpg"
-              height="214" width="320"
-               alt="blog-image">
+            <picture class="event-card-img">
+              <source type="image/webp" srcset="assets/img/events/<?php echo $event["code"];?>/1.webp">
+              <img class="event-card-img"
+                  src="assets/img/events/<?php echo $event["code"];?>/1.jpg"
+                  height="214" width="320"
+                   alt="event-image">
+            </picture>
           <div class="event-card-info">
             <header class="event-card-header">
               <h2 class="event-card-title"><?php echo $event['title']; ?></h2>

@@ -2,7 +2,7 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8">
-    <title>Mobillieteit</title>
+    <title>Week van de Mobiliteit</title>
     <meta name="author" content="Billie Vanderhaeghen">
     <meta name="description" content="Week van de mobiliteit">
     <meta name="viewport" content="width=device-width, initial-scale=1">
