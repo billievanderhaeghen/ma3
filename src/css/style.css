@@ -172,11 +172,12 @@ body {
   background-color: var(--yellow);
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .notfound-error {
+  width: 25rem;
   font-size: 2rem;
   line-height: 3rem;
   text-align: center;
@@ -687,6 +688,10 @@ body {
     justify-content: center;
   }
 
+  .notfound-section {
+    height: 24rem;
+  }
+
   /* footer */
 
   .footer {
@@ -844,6 +849,10 @@ body {
     justify-content: center;
   }
 
+  .notfound-section {
+    height: 26rem;
+  }
+
   /* footer */
 
   .footer {
@@ -965,7 +974,7 @@ body {
   }
 
   .notfound-section {
-    height: 16rem;
+    height: 24rem;
   }
 
   /* details */
@@ -1182,6 +1191,10 @@ body {
     justify-content: space-around;
   }
 
+  .social .links {
+    width: 70vw;
+  }
+
   /* agenda */
 
   .form-basic {
@@ -1256,7 +1269,7 @@ body {
   }
 
   .notfound-section {
-    height: 16rem;
+    height: 24rem;
   }
 
 }

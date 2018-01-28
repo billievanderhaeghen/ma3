@@ -32,10 +32,16 @@
   </header>
   <main>
     <section class="notfound-section">
+      <header>
+        <h2 class="hidden">Niet gevonden</h2>
+      </header>
+      <div class="results-space"></div>
       <p class="notfound-error"> Oeps, je hebt ergens een afslag gemist. Deze pagina bestaat niet. </p>
       <div class="notfound-button">
         <a href="index.php" class="notfound-a">Keer terug</a>
       </div>
+      <div class="results-space"></div>
+      <div class="results-space"></div>
     </section>
   </main>
 </main>
