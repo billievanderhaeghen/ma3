@@ -17,7 +17,7 @@
       $postalInput = document.querySelector(`[name="postcode"]`);
       $tagInput = document.querySelectorAll(`[name="tag"]`);
       $dayInput = document.querySelectorAll(`[name="day"]`);
-      $results = document.querySelector(`.results`);
+      $results = document.querySelector(`.events-agenda`);
 
       $searchInput.addEventListener(`input`, fetchHandler);
       $postalInput.addEventListener(`input`, fetchHandler);
@@ -73,20 +73,21 @@
 
   const createEventCard = result => {
     // console.log(result.id.len);
-    return `<article class="event-card">
-      <a class="card-link" href="index.php?page=detail&amp;id=${result.id}">
-      <img class="event-card-img"
-          src="assets/img/events/${result.code}/1.jpg"
-          height="214" width="320"
-           alt="blog-image">
-      <div class="event-card-info">
-        <header class="event-card-header">
-          <h2 class="event-card-title">${result.title}</h2>
-          <p class="event-card-start">${result.start}</p>
-        </header>
-      </div>
-      </a>
-    </article>`;
+    return `
+      <article class="event-card">
+        <a class="card-link" href="index.php?page=detail&amp;id=${result.id}">
+        <img class="event-card-img"
+            src="assets/img/events/${result.code}/1.jpg"
+            height="214" width="320"
+             alt="blog-image">
+        <div class="event-card-info">
+          <header class="event-card-header">
+            <h2 class="event-card-title">${result.title}</h2>
+            <p class="event-card-start">${result.start}</p>
+          </header>
+        </div>
+        </a>
+      </article>`;
   };
 
   init();

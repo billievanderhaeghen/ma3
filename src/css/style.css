@@ -313,7 +313,6 @@ body {
 
 .form-text-input {
   display: flex;
-  flex-flow: row wrap;
   align-items: center;
 }
 
@@ -362,17 +361,39 @@ body {
   overflow-y: hidden;
 }
 
+.days {
+  height: 5.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+}
+
+.day-label {
+  font-family: MairyBook;
+  color: var(--mellowYellow);
+  font-size: 1.6rem;
+  background-color: #efba19;
+  text-align: center;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.day-label:hover, .day-check:checked + label {
+  border-bottom: .7rem solid white;
+  background-color: var(--blue);
+  color: white;
+}
+
 .tag-check:checked + label {
   background-image: url(../assets/img/bordershadow_blue.png);
   background-repeat: no-repeat;
   background-position: 93% 10%;
   background-color: var(--blue);
   color: white;
-}
-
-.day-label {
-  font-family: MairyBook;
-  color: var(--mellowYellow);
 }
 
 .label5, .label14 {
@@ -573,6 +594,42 @@ body {
     width: 23rem;
   }
 
+  /* agenda */
+
+  .form-basic {
+    height: 16rem;
+    display: flex;
+    width: 95vw;
+    align-self: center;
+    /* align-items: center; */
+    flex-flow: column nowrap;
+    justify-content: space-around;
+  }
+
+  .form-text-input {
+    flex-flow: row wrap;
+    height: 12rem;
+    width: 60rem;
+    justify-content: space-around;
+  }
+
+  .form-search-input, .form-postcode-input {
+    width: 28rem;
+  }
+
+  .days {
+    align-self: flex-end;
+    width: 45vw;
+    height: 5.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .day-label {
+    width: 10vw;
+  }
+
   /* footer */
 
   .footer {
@@ -656,6 +713,40 @@ body {
 
   .dag-button {
     width: 23rem;
+  }
+
+  /* agenda */
+
+  .form-basic {
+    height: 16rem;
+    display: flex;
+    /* align-items: center; */
+    flex-flow: column nowrap;
+    justify-content: space-around;
+  }
+
+  .form-text-input {
+    flex-flow: row wrap;
+    height: 12rem;
+    width: 60rem;
+    justify-content: space-around;
+  }
+
+  .form-search-input, .form-postcode-input {
+    width: 28rem;
+  }
+
+  .days {
+    align-self: flex-end;
+    width: 70vw;
+    height: 5.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .day-label {
+    width: 15vw;
   }
 
   /* footer */
@@ -742,6 +833,40 @@ body {
 
   .dag-button {
     width: 23rem;
+  }
+
+  /* agenda */
+
+  .form-basic {
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+  }
+
+  .form-text-input {
+    flex-flow: row wrap;
+    height: 12rem;
+    width: 60rem;
+    justify-content: space-around;
+  }
+
+  .form-search-input, .form-postcode-input {
+    width: 28rem;
+  }
+
+  .days {
+    align-self: center;
+    width: 90vw;
+    height: 5.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .day-label {
+    width: 20vw;
   }
 
   /* footer */
@@ -929,8 +1054,9 @@ body {
   }
 
   .form-text-input {
+    flex-flow: column wrap;
     height: 12rem;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .form-search-input, .form-postcode-input {
@@ -938,29 +1064,15 @@ body {
   }
 
   .days {
+    align-self: center;
     height: 5.5rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-
   }
 
   .day-label {
-    font-size: 1.6rem;
-    background-color: var(--red);
     width: 22vw;
-    text-align: center;
-    height: 5.5rem;
-    /* padding: .5rem; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
-
-  .day-label:hover, .day-check:checked + label {
-    background-color: var(--blue);
-    color: var(--mellowYellow);
   }
 
   /* details */
