@@ -157,6 +157,9 @@ body {
 .no-results {
   font-size: 2rem;
   color: var(--brown);
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 /* 404 */
@@ -383,7 +386,7 @@ body {
 }
 
 .day-label:hover, .day-check:checked + label {
-  border-bottom: .7rem solid white;
+  border-bottom: .4rem solid white;
   background-color: var(--blue);
   color: white;
 }
@@ -420,7 +423,6 @@ body {
 
 .details-header {
   display: grid;
-  /* height: 7rem; */
   grid-gap: 1rem;
   align-items: flex-end;
   justify-content: center;
@@ -448,10 +450,22 @@ body {
   }
 }
 
+.details-text {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.details-content, .details-practical {
+
+  & strong {
+    background-color: var(--blue);
+    font-weight: bold;
+  }
+}
+
 .details-section {
   background-color: var(--yellow);
   color: white;
-  position: relative;
 }
 
 .details-article {
@@ -597,7 +611,7 @@ body {
   /* agenda */
 
   .form-basic {
-    height: 16rem;
+    height: 17rem;
     display: flex;
     width: 95vw;
     align-self: center;
@@ -628,6 +642,49 @@ body {
 
   .day-label {
     width: 10vw;
+  }
+
+  /* details */
+
+  .details-article {
+    grid-template-columns: 40vw 50vw;
+    grid-template-rows: repeat(5, min-content);
+    grid-gap: 2rem;
+  }
+
+  .details-section {
+    grid-row: 3;
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .details-list {
+    width: 40vw;
+  }
+
+  .details {
+    width: 32rem;
+  }
+
+  .details-text {
+    display: grid;
+    grid-gap: 1rem;
+    align-self: flex-start;
+    grid-column: 2;
+    grid-row: 2 / span 3;
+  }
+
+  .details-content, .details-practical {
+    align-self: flex-start;
+    width: 38vw;
+  }
+
+  .details-img-div {
+    grid-row: 2;
+    height: 21.4rem;
+    display: flex;
+    justify-content: center;
   }
 
   /* footer */
@@ -718,7 +775,7 @@ body {
   /* agenda */
 
   .form-basic {
-    height: 16rem;
+    height: 17rem;
     display: flex;
     /* align-items: center; */
     flex-flow: column nowrap;
@@ -747,6 +804,44 @@ body {
 
   .day-label {
     width: 15vw;
+  }
+
+  /* details */
+
+  .details-article {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, min-content);
+    grid-gap: 2rem;
+  }
+
+  .details-section {
+    grid-row: 3;
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .details-list {
+    width: 50vw;
+  }
+
+  .details-text {
+    display: grid;
+    grid-gap: 1rem;
+    align-self: flex-start;
+    grid-column: 2;
+    grid-row: 2 / span 3;
+  }
+
+  .details-content, .details-practical {
+    width: 40vw;
+  }
+
+  .details-img-div {
+    grid-row: 2;
+    height: 21.4rem;
+    display: flex;
+    justify-content: center;
   }
 
   /* footer */
@@ -838,7 +933,7 @@ body {
   /* agenda */
 
   .form-basic {
-    height: 15rem;
+    height: 17rem;
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
@@ -867,6 +962,53 @@ body {
 
   .day-label {
     width: 20vw;
+  }
+
+  .notfound-section {
+    height: 16rem;
+  }
+
+  /* details */
+
+  .details-article {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .details-section {
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .details-list {
+    width: 50vw;
+  }
+
+  .details-text {
+    display: grid;
+    grid-gap: 1rem;
+    align-self: center;
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    justify-content: center;
+  }
+
+  .details-content, .details-practical {
+    /* width: 85vw; */
+    margin-bottom: 3rem;
+    width: 95vw;
+  }
+
+  .details-img-div {
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .detail-space {
+    height: 3rem;
   }
 
   /* footer */
@@ -1003,10 +1145,6 @@ body {
     width: 20rem;
   }
 
-  .no-results {
-    text-align: center;
-  }
-
   /* dagen */
 
   .dagen {
@@ -1098,21 +1236,17 @@ body {
     justify-content: center;
   }
 
+  .details-list {
+    width: 36rem;
+  }
+
   .details-text {
-    grid-row: 4;
-    font-size: 1.6rem;
-    line-height: 2.2rem;
     align-items: center;
   }
 
   .details-content, .details-practical {
     width: 85vw;
     margin-bottom: 3rem;
-
-    & strong {
-      background-color: var(--blue);
-      font-weight: bold;
-    }
   }
 
   .details-img-div {

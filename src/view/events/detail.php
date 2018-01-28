@@ -33,7 +33,7 @@
          <p class="details-content"><?php echo $event['content'];?></p>
          <p class="details-practical"><?php echo $event['practical'];?></p>
        </div>
-       <section class="details-section">
+       <section class="details-section details-list">
          <div class="details">
            <header>
              <h3 class="detail-header-h3"><?php echo $day['name'] ?></h3>
@@ -61,7 +61,6 @@
         <header>
           <h2 class="hidden">gerelateerde events</h2>
         </header>
-
       </section>
   </section>
 </main>
