@@ -53,7 +53,7 @@
       <div class="tags">
         <?php foreach($tags as $tag): ?>
           <input type="checkbox" name="tag" class="hidden tag-check" id="<?php echo $tag['tag'] ?>" value="<?php echo $tag['tag'] ?>">
-          <label class="tag-label" for="<?php echo $tag['tag'] ?>"><?php echo $tag['tag'] ?></label>
+          <label class="tag-label label<?php echo $tag['id'] ?>" for="<?php echo $tag['tag'] ?>"><?php echo $tag['tag'] ?></label>
         <?php endforeach; ?>
       </div>
       <input type="hidden" name="page" value="agenda">
@@ -64,8 +64,8 @@
     <header>
       <h2 class="hidden">resultaten</h2>
     </header>
+    <div class="results-space"></div>
     <div class="event-cards events-agenda">
-      <div class="results-space"></div>
       <?php if(!$events): ?>
         <p class="no-results">Sorry, er zijn evenementen gevonden</p>
       <?php endif; ?>
@@ -86,7 +86,7 @@
           </a>
         </article>
       <?php endforeach;?>
-      <div class="results-space"></div>
     </div>
+    <div class="results-space"></div>
   </section>
 </main>

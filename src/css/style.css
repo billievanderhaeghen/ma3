@@ -375,6 +375,10 @@ body {
   color: var(--mellowYellow);
 }
 
+.label5, .label14 {
+  display: none;
+}
+
 .tag-label {
   margin-left: .5rem;
   margin-right: .5rem;
@@ -514,11 +518,18 @@ body {
     flex-flow: column;
   }
 
-  .events-home {
+  .events-home, .events-agenda {
     display: grid;
     grid-template-columns: repeat(3, 34rem);
     justify-content: center;
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
+  }
+
+  .results-space {
+    height: 3rem;
+  }
+
+  .events-home {
     height: 40rem;
   }
 
@@ -599,11 +610,15 @@ body {
     flex-flow: column;
   }
 
-  .events-home {
+  .events-home, .events-agenda {
     display: grid;
     grid-template-columns: repeat(2, 37rem);
     justify-content: center;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
+  }
+
+  .results-space {
+    height: 3rem;
   }
 
   .home-event1 {
@@ -682,10 +697,14 @@ body {
     flex-flow: column;
   }
 
-  .events-home {
+  .events-home, .events-agenda {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+  }
+
+  .results-space {
+    height: 3rem;
   }
 
   .article-about {
@@ -748,7 +767,7 @@ body {
 
 @media only screen and (max-width: 570px) {
 
-  .events-home {
+  .events-home, .events-agenda {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
@@ -844,11 +863,6 @@ body {
 
   .results-space {
     height: 2rem;
-  }
-
-  .results .events-agenda {
-    display: grid;
-    grid-gap: 2rem;
   }
 
   .home-event4 {
