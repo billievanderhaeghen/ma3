@@ -105,6 +105,9 @@ class EventsController extends Controller {
     $tags = $this->eventDAO->selectTagsByEventId($id);
     $this->set('tags', $tags);
 
+    $relatedEvents = $this->eventDAO->selectEventsBySameDay($id);
+    $this->set('relatedEvents', $relatedEvents);
+
     if( empty($event) ){
       $_SESSION["error"] = ['Deze pagina bestaat niet'];
       $this->redirect('index.php?page=notfound');

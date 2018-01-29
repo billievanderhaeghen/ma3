@@ -100,6 +100,24 @@ class EventDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  public function selectEventsBySameDay($id) {
+    $day = $this -> selectDayIdByEventId($id);
+    $sql = "SELECT * FROM `ma3_auto_events` WHERE `id` != :id AND `day` = :day LIMIT 3";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    $stmt->bindValue(':day', $day['day']);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  public function selectDayIdByEventId($id) {
+    $sql = "SELECT `day` FROM `ma3_auto_events` WHERE `id` = :id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
   public function selectAll() {
     $sql = "SELECT * FROM `ma3_auto_events`";
     $stmt = $this->pdo->prepare($sql);

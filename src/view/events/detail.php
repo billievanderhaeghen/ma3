@@ -48,7 +48,7 @@
                <p class="details-datum"><?php echo $date;?></p>
                <p class="details-uur"><?php echo $time;?></p>
              </div>
-             <a class="details-link" href="<?php echo $event['link'];?>">over <?php echo $day['name'] ?></a>
+             <a class="details-link" href="<?php echo $event['link'];?>">meer info</a>
              <ul class="details-tags">
                <?php foreach($tags as $tag): ?>
                      <?php foreach ($tag as $t): ?>
@@ -59,11 +59,36 @@
            </div>
          </div>
        </section>
+       <section class="related-events">
+         <header class="related-title">
+           <h2>Anderen bekeken ook:</h2>
+         </header>
+         <div class="detail-events">
+           <?php foreach ($relatedEvents as $relatedEvent): ?>
+             <article class="event-card detail-event-card">
+               <a class="card-link" href="index.php?page=detail&amp;id=<?php echo $relatedEvent["id"]; ?>">
+                 <picture class="event-card-img">
+                   <source type="image/webp" srcset="assets/img/events/<?php echo $relatedEvent["code"];?>/1.webp">
+                   <img class="event-card-img"
+                       src="assets/img/events/<?php echo $relatedEvent["code"];?>/1.jpg"
+                       height="214" width="320"
+                        alt="event-image">
+                 </picture>
+               <div class="event-card-info detail-event-card-info">
+                 <header class="event-card-header">
+                   <h2 class="event-card-title"><?php echo $relatedEvent['title']; ?></h2>
+                   <?php $date = date('d/m', strtotime($relatedEvent['start']));?>
+                   <p class="event-card-start"><?php echo $date;?></p>
+                 </header>
+               </div>
+               </a>
+             </article>
+           <?php endforeach; ?>
+         </div>
+       </section>
+       <div class="results-space">
+
+       </div>
       </article>
-      <section class="related-events">
-        <header>
-          <h2 class="hidden">gerelateerde events</h2>
-        </header>
-      </section>
   </section>
 </main>
