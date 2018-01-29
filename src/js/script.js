@@ -69,6 +69,14 @@
   };
 
   const createEventCard = result => {
+    let date;
+    const $startDate = new Date(result.start).getDate();
+    const $endDate = new Date(result.end).getDate();
+    if ($startDate === $endDate) {
+      date = `${$startDate}/09`;
+    } else {
+      date = `${$startDate}/09 - ${$endDate}`;
+    }
     return `
         <article class="event-card">
           <a class="card-link" href="index.php?page=detail&amp;id=${result.id}">
@@ -81,7 +89,7 @@
           <div class="event-card-info">
             <header class="event-card-header">
               <h2 class="event-card-title">${result.title}</h2>
-              <p class="event-card-start">${new Date(result.start).getDate()}/09</p>
+              <p class="event-card-start">${date}</p>
             </header>
           </div>
           </a>

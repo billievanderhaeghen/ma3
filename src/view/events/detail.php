@@ -43,10 +43,16 @@
            </header>
            <div class="details-div">
              <p class="details-address"><?php echo $event['address'];?>, <?php echo $event['city'];?></p>
-             <?php $date = date('d/m', strtotime($event['start'])); $time = date('h:i', strtotime($event['start'])); ?>
+             <?php $time = date('h:i', strtotime($event['start'])); ?>
              <div class="details-date">
-               <p class="details-datum"><?php echo $date;?></p>
-               <p class="details-uur"><?php echo $time;?></p>
+               <?php $startDate = date('d/m', strtotime($event['start']));
+               $endDate = date('d/m', strtotime($event['end'])); ?>
+               <?php if ($startDate === $endDate): ?>
+                 <p class="details-datum"><?php echo $startDate;?></p>
+                 <p class="details-uur"><?php echo $time;?></p>
+               <?php else: ?>
+                 <p class="details-datum"><?php echo $startDate;?> - <?php echo $endDate;?></p>
+               <?php endif; ?>
              </div>
              <a class="details-link" href="<?php echo $event['link'];?>">meer info</a>
              <ul class="details-tags">
@@ -77,8 +83,13 @@
                <div class="event-card-info detail-event-card-info">
                  <header class="event-card-header">
                    <h2 class="event-card-title"><?php echo $relatedEvent['title']; ?></h2>
-                   <?php $date = date('d/m', strtotime($relatedEvent['start']));?>
-                   <p class="event-card-start"><?php echo $date;?></p>
+                   <?php $startDate = date('d/m', strtotime($event['start']));
+                   $endDate = date('d/m', strtotime($event['end'])); ?>
+                   <?php if ($startDate === $endDate): ?>
+                     <p class="event-card-start"><?php echo $startDate;?></p>
+                   <?php else: ?>
+                     <p class="event-card-start"><?php echo $startDate;?> - <?php echo $endDate;?></p>
+                   <?php endif; ?>
                  </header>
                </div>
                </a>

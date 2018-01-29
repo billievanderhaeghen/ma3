@@ -83,8 +83,13 @@
           <div class="event-card-info">
             <header class="event-card-header">
               <h2 class="event-card-title"><?php echo $event['title']; ?></h2>
-              <?php $date = date('d/m', strtotime($event['start']));?>
-              <p class="event-card-start"><?php echo $date; ?></p>
+              <?php $startDate = date('d/m', strtotime($event['start']));
+              $endDate = date('d/m', strtotime($event['end'])); ?>
+              <?php if ($startDate === $endDate): ?>
+                <p class="event-card-start"><?php echo $startDate;?></p>
+              <?php else: ?>
+                <p class="event-card-start"><?php echo $startDate;?> - <?php echo $endDate;?></p>
+              <?php endif; ?>
             </header>
           </div>
           </a>
