@@ -31,8 +31,6 @@
           $dayCheck = document.querySelector(`.day-check`);
           if ($dayCheck.innerHTML === $day.attributes.value.value) {
             $day.setAttribute(`checked`, true);
-            console.log($day);
-            console.log(`yas`);
           }
         }
         $day.addEventListener(`change`, fetchHandler);
@@ -59,7 +57,6 @@
   };
 
   const parse = results => {
-    console.log(results.length);
     if (results.length > 0) {
       $results.innerHTML = results
         .map(product => createEventCard(product))
