@@ -67,7 +67,7 @@
     <div class="results-space"></div>
     <div class="event-cards events-agenda">
       <?php if(!$events): ?>
-        <p class="no-results">Sorry, er zijn geen evenementen gevonden</p>
+        <p class="no-results">Sorry, er zijn geen evenementen gevonden met jouw voorwaarden</p>
       <?php endif; ?>
       <?php foreach($events as $event): ?>
         <article class="event-card">

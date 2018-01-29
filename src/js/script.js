@@ -104,7 +104,7 @@
         .join(``);
     } else {
       $results.innerHTML = `<div class="results-space"></div>
-      <p class="no-results">Sorry, er zijn evenementen gevonden met jouw voorwaarden</p>
+      <p class="no-results">Sorry, er zijn geen evenementen gevonden met jouw voorwaarden</p>
       <div class="results-space"></div>`;
     }
   };
