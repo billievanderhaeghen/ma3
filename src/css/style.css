@@ -397,7 +397,7 @@ body {
   color: white;
 }
 
-.tag-check:checked + label {
+.tag-check:checked + label, {
   background-image: url(../assets/img/bordershadow_blue.png);
   background-repeat: no-repeat;
   background-position: 93% 10%;
@@ -423,6 +423,25 @@ body {
   border-radius: 2rem;
   font-size: 2.5rem;
   color: var(--brown);
+}
+
+.checked {
+  background-image: url(../assets/img/bordershadow_blue.png);
+  background-repeat: no-repeat;
+  background-position: 93% 10%;
+  background-color: var(--blue);
+  color: white;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  height: 5rem;
+  text-transform: uppercase;
+  font-family: MairyBook;
+  padding-top: 1.2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
+  border-radius: 2rem;
+  font-size: 2.5rem;
 }
 
 /* detail */

@@ -6,6 +6,7 @@
   let $dayInput;
   let $results;
   let $dayCheck;
+  let $checkedTag;
 
   const init = () => {
     if (document.querySelector(`form`)) {
@@ -18,12 +19,16 @@
       $tagInput = document.querySelectorAll(`[name="tag"]`);
       $dayInput = document.querySelectorAll(`[name="day"]`);
       $results = document.querySelector(`.events-agenda`);
+      if (document.querySelector(`:checked`)) {
+        $checkedTag = document.querySelector(`:checked`);
+        $checkedTag.addEventListener(`change`, checkedTagHandler);
+      }
 
       $searchInput.addEventListener(`input`, fetchHandler);
       $postalInput.addEventListener(`input`, fetchHandler);
 
       $tagInput.forEach($tag => {
-        $tag.addEventListener(`change`, fetchHandler);
+        $tag.addEventListener(`change`, tagHandler);
       });
 
       $dayInput.forEach($day => {
@@ -37,6 +42,42 @@
       });
 
     }
+
+  };
+
+  const tagHandler = e => {
+    fetchHandler();
+
+    if (e.target.checked === true) {
+      console.log(`jam`);
+    }
+    const $tags = document.querySelector(`.tags`);
+    console.log($tags);
+    const $labels = document.querySelectorAll(`.tag-label`);
+
+    $labels.forEach($label => {
+      const $checked = document.querySelector(`[id=${$label.htmlFor}]`);
+      if ($checked.checked === true) {
+        $tags.scrollTo(0, 0);
+        $tags.removeChild($label);
+        $tags.insertBefore($label, $tags.childNodes[0]);
+        $checked.setAttribute(`checked`, ``);
+        $label.classList.add(`checked`);
+        console.log($checked.id);
+        console.log($label);
+      } else {
+        $label.classList.remove(`checked`);
+      }
+    });
+
+    console.log($labels);
+  };
+
+  const checkedTagHandler = () => {
+    console.log(`yass bish`);
+
+    // $checkedTag.classList.remove(`checked`);
+    // $checkedTag.classList.add(`tag-label`);
 
   };
 
@@ -75,7 +116,7 @@
     if ($startDate === $endDate) {
       date = `${$startDate}/09`;
     } else {
-      date = `${$startDate}/09 - ${$endDate}`;
+      date = `${$startDate}/09 - ${$endDate}/09`;
     }
     return `
         <article class="event-card">
