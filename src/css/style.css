@@ -1168,6 +1168,7 @@ body {
 
   .nav-icon {
     background-image: url(../assets/img/illustrations_icons_navigation.svg);
+    background-repeat: no-repeat;
   }
 
   .agenda .nav-icon {
@@ -1178,6 +1179,10 @@ body {
     &:hover {
       background-position: 0% 100%;
     }
+  }
+
+  .active .nav-icon {
+    background-position-y: 100%;
   }
 
   .praktisch .nav-icon {

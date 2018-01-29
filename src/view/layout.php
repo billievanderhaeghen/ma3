@@ -6,6 +6,7 @@
     <meta name="author" content="Billie Vanderhaeghen">
     <meta name="description" content="Week van de mobiliteit">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.png">
     <script>
     WebFontConfig = {
      google: {

@@ -81,7 +81,7 @@
           <div class="event-card-info">
             <header class="event-card-header">
               <h2 class="event-card-title">${result.title}</h2>
-              <p class="event-card-start">${result.start}</p>
+              <p class="event-card-start">${new Date(result.start).getDate()}/09</p>
             </header>
           </div>
           </a>
